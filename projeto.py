@@ -15,10 +15,8 @@ db = mongo_client["sistema"]
 def criptografar(texto):
     return cipher_suite.encrypt(texto.encode()).decode()
 
-
 def descriptografar(texto_criptografado):
     return cipher_suite.decrypt(texto_criptografado.encode()).decode()
-
 
 def adicionar_registro():
     id = entry_id.get()
@@ -93,7 +91,6 @@ entry_senha = ctk.CTkEntry(telaMedico, placeholder_text="Senha", show="*")
 entry_senha.pack(pady=5)
 ctk.CTkButton(telaMedico, text="Adicionar Médico", command=adicionar_medico).pack(pady=5)
 
-# Resultado da operação
 label_resultado = ctk.CTkLabel(app, text="")
 label_resultado.pack(pady=10)
 
